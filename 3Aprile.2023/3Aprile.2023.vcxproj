@@ -138,6 +138,7 @@
     <ClInclude Include="Base.h" />
     <ClInclude Include="Employer.h" />
     <ClInclude Include="Figura.h" />
+    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
