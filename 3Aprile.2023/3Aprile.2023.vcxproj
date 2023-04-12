@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>\\Teacher\Общая папка\CT3;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -130,15 +133,21 @@
     <ClCompile Include="3Aprile.2023.cpp" />
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Cashier.cpp" />
     <ClCompile Include="Employer.cpp" />
     <ClCompile Include="Figura.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Magazin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Cashier.h" />
     <ClInclude Include="Employer.h" />
     <ClInclude Include="Figura.h" />
+    <ClInclude Include="File.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="Magazin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
