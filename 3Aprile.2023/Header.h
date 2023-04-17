@@ -1,6 +1,5 @@
 #pragma once
 
-
 /*
 class A{
 public:
@@ -67,8 +66,6 @@ class D : public B {
 //        throw;//передача исключения след catch
 //    }
 //}
-
-
 
 
 //main
