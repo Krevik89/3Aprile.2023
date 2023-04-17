@@ -42,14 +42,14 @@
       // size
       // name
       
-// _findnext(long done,_findata_t*fileinfo)
+// _findnext(long done, _finddata_t* fileinfo)
 // _findclose(long done) - чистит память от найденых ресурсов
 
 
 
 //#include<sys/locking.h>
 // int _locking(int handle, int mode, long nbytes) - блок или разблокирует 
-    // _LK_LOCK , _LK_RCLK    - блочит байты -1 если после 10 попыток не удастся
+    // _LK_LOCK , _LK_RCLK    - блокирует байты return -1 если после 10 попыток не удастся заблочить
     // _LK_NBLCK, _LK_NBRLCK   - без попыток сразу регенит ошибку -1
     // _LK_UNLCK - разблокирует
 
@@ -99,7 +99,6 @@ void RemoveDir();// del name
 void CreateDir();// new dir
 
 //-----------------------------------------//
-
 
 void main()
 {
@@ -182,9 +181,6 @@ void main()
         }
     } while (ch != '0');*/
 
-
-
-
 }
 
 void RenameFile() {
@@ -201,7 +197,7 @@ void RemoveFile() {
     char name[50];
     cout << "Enter name->"; cin >> name;
     if (remove(name) != 0)
-        cout << "Erorr\n\n";
+        cout << "Eror\n";
     else
         cout << "ALL GOOD\n";
 }
@@ -229,7 +225,6 @@ void Dir() {
 
     _findclose(done);
     delete fileinfo;
-
 }
 
 void RenameDir() {
@@ -238,7 +233,7 @@ void RenameDir() {
     cout << "Enter New name->"; cin >> newName;
 
     if (rename(old, newName) != 0)
-        cout << "Erorr rename\n\n";
+        cout << "Eror rename\n\n";
     else
         cout << "ALL GOOD\n";
 }
@@ -247,7 +242,7 @@ void RemoveDir() {
     cout << "Enter name->\n"; cin >> name;
 
     if (_rmdir(name) == -1)
-        cout << "Eror no delete\n";
+        cout << "Eror no remove\n";
     else
         cout << "All nice\n";
 }
