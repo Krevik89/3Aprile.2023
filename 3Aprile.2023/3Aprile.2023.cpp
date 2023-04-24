@@ -70,18 +70,18 @@ using namespace std;
     // _LK_NBLCK, _LK_NBRLCK   - без попыток сразу регенит ошибку -1
     // _LK_UNLCK - разблокирует
 
-using namespace std;
+
 
 void russianMessage(const char* str) {
     char message[100];
     CharToOemA(str, message);
-    cout << message;
+    std::cout << message;
 }
 
 	
 
 
-}
+
 
 /*//cin  >>  // istream
    //cout <<  // ostream
@@ -161,88 +161,88 @@ void main()
         }
     } while (ch!='0');*/
 
-		   }
+	/*	   }
 		   cin >> answer;
-	   } while (answer < '1' || answer >'3');
+	   } while (answer < '1' || answer >'3');*/
 
 
 
 
 }
-
-void RenameFile() {
-    char old[50], newName[50];
-    cout << "Enter old name ->"; cin >> old;
-    cout << "Enter New name->"; cin >> newName;
-
-    if (rename(old, newName) != 0)
-        cout << "Erorr rename\n\n";
-    else
-        cout << "ALL GOOD\n";
-}
-void RemoveFile() {
-    char name[50];
-    cout << "Enter name->"; cin >> name;
-    if (remove(name) != 0)
-        cout << "Erorr\n\n";
-    else
-        cout << "ALL GOOD\n";
-}
-void Dir() {
-    char path[70];
-    cout << "Enter full path(example,C::\\)->"; cin >> path;
-    char mask[15];
-    cout << "Enter musk(example,*.* or .txt)->"; cin >> mask;
-
-    strcat_s(path, mask);
-
-    _finddata_t* fileinfo = new _finddata_t;
-    intptr_t done = _findfirst(path, fileinfo);
-    int count = 0;
-    intptr_t MayWeWork = done;
-
-    while (MayWeWork != -1)
-    {
-        count++;
-        cout << fileinfo->name << "\n";
-        MayWeWork = _findnext(done, fileinfo);
-    }
-
-    cout << "Count file(s) =" << count << endl;
-
-    _findclose(done);
-    delete fileinfo;
-
-}
-
-		   cout << Msg[INPUT_ELEMENTS];
-		   for ( i = 0; i < M; i++){
-			   for (j = 0; j < N; j++) {
-				   cout << "arr[" << i << "][" << j << "] = ";
-				   cin >> num;
-				   outF << num << " ";
-
-    if (rename(old, newName) != 0)
-        cout << "Erorr rename\n\n";
-    else
-        cout << "ALL GOOD\n";
-}
-void RemoveDir() {
-    char name[50];
-    cout << "Enter name->\n"; cin >> name;
-
-    if (_rmdir(name) == -1)
-        cout << "Eror no delete\n";
-    else
-        cout << "All nice\n";
-}
-void CreateDir() {
-    char name[50];
-    cout << "Enter name->\n"; cin >> name;
-    if (_mkdir(name) == -1)
-        cout << "Eror no create\n";
-    else
-        cout << "All nice\n";
-}
+//
+//void RenameFile() {
+//    char old[50], newName[50];
+//    cout << "Enter old name ->"; cin >> old;
+//    cout << "Enter New name->"; cin >> newName;
+//
+//    if (rename(old, newName) != 0)
+//        cout << "Erorr rename\n\n";
+//    else
+//        cout << "ALL GOOD\n";
+//}
+//void RemoveFile() {
+//    char name[50];
+//    cout << "Enter name->"; cin >> name;
+//    if (remove(name) != 0)
+//        cout << "Erorr\n\n";
+//    else
+//        cout << "ALL GOOD\n";
+//}
+//void Dir() {
+//    char path[70];
+//    cout << "Enter full path(example,C::\\)->"; cin >> path;
+//    char mask[15];
+//    cout << "Enter musk(example,*.* or .txt)->"; cin >> mask;
+//
+//    strcat_s(path, mask);
+//
+//    _finddata_t* fileinfo = new _finddata_t;
+//    intptr_t done = _findfirst(path, fileinfo);
+//    int count = 0;
+//    intptr_t MayWeWork = done;
+//
+//    while (MayWeWork != -1)
+//    {
+//        count++;
+//        cout << fileinfo->name << "\n";
+//        MayWeWork = _findnext(done, fileinfo);
+//    }
+//
+//    cout << "Count file(s) =" << count << endl;
+//
+//    _findclose(done);
+//    delete fileinfo;
+//
+//}
+//
+//		   cout << Msg[INPUT_ELEMENTS];
+//		   for ( i = 0; i < M; i++){
+//			   for (j = 0; j < N; j++) {
+//				   cout << "arr[" << i << "][" << j << "] = ";
+//				   cin >> num;
+//				   outF << num << " ";
+//
+//    if (rename(old, newName) != 0)
+//        cout << "Erorr rename\n\n";
+//    else
+//        cout << "ALL GOOD\n";
+//}
+//void RemoveDir() {
+//    char name[50];
+//    cout << "Enter name->\n"; cin >> name;
+//
+//    if (_rmdir(name) == -1)
+//        cout << "Eror no delete\n";
+//    else
+//        cout << "All nice\n";
+//}
+//void CreateDir() {
+//    char name[50];
+//    cout << "Enter name->\n"; cin >> name;
+//    if (_mkdir(name) == -1)
+//        cout << "Eror no create\n";
+//    else
+//        cout << "All nice\n";
+//}
 
 
